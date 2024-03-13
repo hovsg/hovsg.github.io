@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Hierarchical Open-Vocabulary 3D Scene Graphs for Language-Grounded Robot Navigation</title>
+  <meta name="description"
+    content="Hierarchical Open-Vocabulary 3D Scene Graphs for Language-Grounded Robot Navigation">
+  <meta name="keywords" content="AVLMaps">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta property="og:title"
+    content="Hierarchical Open-Vocabulary 3D Scene Graphs for Language-Grounded Robot Navigation">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name"
+    content="Hierarchical Open-Vocabulary 3D Scene Graphs for Language-Grounded Robot Navigation">
+  <meta property="og:image" content="https://hovsg.github.io/static/images/cover_lady.png" />
+  <meta property="og:image:type" content="image/png" />
+  <meta property="og:image:width" content="1082" />
+  <meta property="og:image:height" content="639" />
+  <meta property="og:url" content="https://hovsg.github.io" />
+  <meta property="og:description"
+    content="Project page for Hierarchical Open-Vocabulary 3D Scene Graphs for Language-Grounded Robot Navigation" />
+  <meta name="twitter:title"
+    content="Hierarchical Open-Vocabulary 3D Scene Graphs for Language-Grounded Robot Navigation" />
+  <meta name="twitter:description"
+    content="Project page for Hierarchical Open-Vocabulary 3D Scene Graphs for Language-Grounded Robot Navigation" />
+  <meta name="twitter:image" content="https://hovsg.github.io/static/images/cover_lady.png" />
+
+  <!-- Google Tag Manager -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-M5S6KRZV79"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-M5S6KRZV79');
+  </script>
+  <!-- End Google Tag Manager -->
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswal sh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/logo.png">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <!-- <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WPRRQQR" height="0" width="0"
+      style="display:none;visibility:hidden"></iframe></noscript> -->
+  <!-- End Google Tag Manager (noscript) -->
+
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">Hierarchical Open-Vocabulary 3D Scene Graphs for Language-Grounded
+              Robot Navigation</h1>
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">
+                <a href="https://github.com/abwerby">Abdelrhman Werby*</a><sup>1</sup>,</span>
+              <span class="author-block">
+                <a href="http://www2.informatik.uni-freiburg.de/~huang/">Chenguang Huang*</a><sup>1</sup>,</span>
+              <span class="author-block">
+                <a href="https://rl.uni-freiburg.de/people/buechner">Martin Büchner*</a><sup>1</sup>,</span>
+              <span class="author-block">
+                <a href="https://rl.uni-freiburg.de/people/valada">Abhinav Valada</a><sup>1</sup>,
+              </span>
+              <span class="author-block">
+                <a href="https://www.utn.de/1/wolfram-burgard/">Wolfram Burgard</a><sup>2</sup>,
+              </span>
+            </div>
+
+            <div class="is-size-5 publication-authors">
+              <span class="author-block"><sup>1</sup>Freiburg University,</span>
+              <span class="author-block"><sup>2</sup>University of Technology Nuremberg</span>
+              <span class="author-block"><sup>*</sup>Equal Contribution</span>
+            </div>
+
+            <div class="column has-text-centered">
+              <div class="publication-links">
+                <!-- PDF Link. -->
+                <span class="link-block">
+                  <a href="static/paper/HOV_SG__ICRA_2024_VLMNM_workshop_compressed.pdf"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                    </span>
+                    <span>Paper</span>
+                  </a>
+                </span>
+                <!-- Video Link. -->
+                <span class="link-block">
+                  <a href="https://hovsg.github.io/" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                    </span>
+                    <span>Video</span>
+                  </a>
+                </span>
+                <!-- Code Link. -->
+                <span class="link-block">
+                  <a href="https://github.com/" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code (Coming Soon)</span>
+                  </a>
+                </span>
+                <!-- CoLab Link. -->
+                <!-- <span class="link-block">
+                  <a href="https://colab.research.google.com/drive/1gdtLvg_Fbl16N3ITp5FsU9ZAG6HmspVb?usp=sharing"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <img src="static/images/colab_icon.png" />
+                    </span>
+                    <span>CoLab</span>
+                  </a>
+                </span> -->
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="hero teaser">
+    <div class="container is-max-desktop">
+      <div class="hero-body">
+        <!-- <video id="teaser" autoplay muted loop playsinline height="100%">
+        <source src=""
+                type="video/mp4">
+      </video> -->
+
+        <div class="image-center-block">
+          <img src="static/images/teaser-icra.png" width="70%" />
+        </div>
+
+        <h2 class="subtitle has-text-centered">
+          HOV-SG allows the construction of accurate, open-vocabulary 3D scene graphs for large-scale and multi-story
+          environments and enables robots to effectively navigate in them with language instructions.
+        </h2>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="hero is-light is-small">
+    <div class="hero-body">
+      <div class="container has-text-centered">
+        <div id="results-carousel" class="carousel results-carousel">
+          <div class="item item-steve has-text-centered">
+            <video poster="" id="steve video" autoplay controls muted loop playsinline height="100%">
+              <source src="static/images/navigation_videos/bean_bag_office_floor_0.mp4" type="video/mp4">
+            </video>
+            <div class="overlay-container">
+              <p id="overlay">move to the bean bag in the office on floor 1</p>
+            </div>
+          </div>
+          <div class="item item-chair-tp has-text-centered">
+            <video poster="" id="chair-tp video" autoplay controls muted loop playsinline height="100%">
+              <source src="static/images/navigation_videos/blue_sofa_corridor_floor_1.mp4" type="video/mp4">
+            </video>
+            <div class="overlay-container">
+              <p id="overlay">go to the blue sofa in the corridor on floor 2</p>
+            </div>
+          </div>
+          <div class="item item-chair-tp has-text-centered">
+            <video poster="" id="chair-tp video" autoplay controls muted loop playsinline height="100%">
+              <source src="static/images/navigation_videos/box_seminar_room_floor_1.mp4" type="video/mp4">
+            </video>
+            <div class="overlay-container">
+              <p id="overlay">navigate to the box in the seminar room on floor 2</p>
+            </div>
+          </div>
+          <div class="item item-shiba has-text-centered">
+            <video poster="" id="shiba video" autoplay controls muted loop playsinline height="100%">
+              <source src="static/images/navigation_videos/chair_office_floor_0.mp4" type="video/mp4">
+            </video>
+            <div class="overlay-container">
+              <p id="overlay">move to the chair in the office on floor 1</p>
+            </div>
+          </div>
+          <div class="item item-fullbody has-text-centered">
+            <video poster="" id="fullbody video" autoplay controls muted loop playsinline height="100%">
+              <source src="static/images/navigation_videos/christmas_tree_floor_0.mp4" type="video/mp4">
+            </video>
+            <div class="overlay-container">
+              <p id="overlay">go to the christmas tree on floor 1</p>
+            </div>
+          </div>
+
+          <div class="item item-fullbody has-text-centered">
+            <video poster="" id="fullbody video" autoplay controls muted loop playsinline height="100%">
+              <source src="static/images/navigation_videos/coat_office_floor_0_climb_down.mp4" type="video/mp4">
+            </video>
+            <div class="overlay-container">
+              <p id="overlay">go to the coat in the office on floor 1</p>
+            </div>
+          </div>
+          <div class="item item-fullbody has-text-centered">
+            <video poster="" id="fullbody video" autoplay controls muted loop playsinline height="100%">
+              <source src="static/images/navigation_videos/corridor_floor_1.mp4" type="video/mp4">
+            </video>
+            <div class="overlay-container">
+              <p id="overlay">go to the corridor on floor 2</p>
+            </div>
+          </div>
+        </div>
+        <p>all videos are played in 4x speed</p>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="section">
+    <div class="container is-max-desktop">
+      <!-- Abstract. -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Abstract</h2>
+          <div class="content has-text-justified">
+            <p>
+              Typically, robotic mapping relies on highly accurate dense representations obtained via approaches to
+              simultaneous localization and mapping. While these maps allow for point/voxel-level features, they do not
+              provide language grounding within large-scale environments due to the sheer number of points. In this
+              work, we present HOV-SG, a hierarchical open-vocabulary 3D scene graph mapping approach for robot
+              navigation. Using open-vocabulary vision foundation models, we first obtain state-of-the-art
+              open-vocabulary maps in 3D. We then perform floor as well as room segmentation and identify room names.
+              Finally, we construct a 3D scene graph hierarchy. Our approach is able to represent multi-story buildings
+              and allows robots to traverse them by providing feasible links among floors. We demonstrate long-horizon
+              robotic navigation in large-scale indoor environments from long queries using large language models based
+              on the obtained scene graph tokens and outperform previous baselines.
+            </p>
+          </div>
+        </div>
+      </div>
+      <!--/ Abstract. -->
+
+      <!-- Paper video. -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Video</h2>
+          <div class="publication-video">
+            <video autoplay controls muted loop playsinline width="100%">
+              <source src="static/images/hovsg_vlmnm_workshop.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column is-full-width">
+          <h2 class="title is-3">Approach</h2>
+          <div class="content has-text-justified has-text-centered">
+            <img src="static/images/overview-icra.png" />
+            <h3 class="title is-4">HOV-SG Creation</h3>
+            <p>
+              The key idea of building a Hierarchical Open-Vocabulary 3D Scene Graph (HOV-SG) is to first
+              segment-level open-vocabulary mapping and then construct a hierarchical scene graph in a top-down manner.
+            </p>
+            <h4>
+              3D Segment-Level Open-Vocabulary Mapping
+            </h4>
+            <p>
+              The main idea of building a segment-level open-vocabulary map is to create a list of 3D point clouds,
+              namely segments, from an RGB-D video with odometry and assign each segment an open-vocabulary feature
+              generated by a pre-trained visual-and-language model (VLM). Unlike previous works that enriched each point
+              in a 3D reconstruction with an independent visual-language feature, we leverage the fact
+              that neighboring points in the 3D world often share the same semantic information. This largely reduces
+              the saved semantic-relevant features while maintaining an excellent descriptive capability of the
+              representation. A segment in our map reflects the essence of the vicinity of the points while the open-
+              vocabulary features contain relevant semantic information. The mapping process is showed in the left and
+              the center blocks of the overview figure.
+            </p>
+            <h4> Hierarchical 3D Scene Graph Construction </h4>
+            <img src="static/images/floor_and_room_seg_compressed.png" />
+            <p>
+              Given the segment-level open-vocabulary map, we construct a hierarchical 3D scene graph in a top-down
+              manner. In order to separate floors, we identify peaks within a height histogram over all points contained
+              in the point cloud. We apply adaptive thresholding and DBSCAN clustering to obtain potential floors and
+              ceilings. We select the top-2 levels in each cluster. Taken pairwise, these represent individual floors
+              (floor and ceiling) in the building as in the figure above. We equip each floor node with a CLIP text
+              embedding using the template “floor {#}”. An edge between the root node and the respective floor node is
+              established.
+            </p>
+            <p>
+              Based on each obtained floor point cloud, we construct a 2D bird’s-eye-view (BEV) histogram as outlined in
+              the right part of the figure above. Next, we obtain walls and apply the Watershed algorithm to obtain a
+              list of region masks. We extract the 3D points that fall into the floor’s height interval as well as the
+              BEV room segment to form room point clouds that are used to associate objects to rooms later. Each room
+              constitutes a node and is connected to its corresponding floor.
+            </p>
+
+            <img src="static/images/room_features.png" />
+
+            <p>
+              In order to attribute room nodes, we associate RGB-D observations whose camera poses reside within a BEV
+              room segment to those rooms. The CLIP embeddings of these images are filtered by extracting k
+              representative view embeddings using the k-means algorithm. During the query, we compute the cosine
+              similarity between the CLIP text embeddings of a room categories list and each representative feature,
+              resulting in a similarity matrix. With the $\operatorname{argmax}$ operation, we obtain opinions from all
+              representatives, allowing retrieval of the room type voted by the majority. These K representative
+              embeddings and the room point cloud are jointly stored in the root node in the graph. An edge between the
+              floor node and each room node and its parent floor node is established. The construction and querying of
+              room features are illustrated in the figure above.
+            </p>
+            <!-- <video autoplay muted loop playsinline width="50%">
+              <source src="static/images/avlmaps_twitter_post_slide_1_cropped.mp4" type="video/mp4">
+            </video> -->
+            <h3>Long Query Navigation</h3>
+            <img src="static/images/long_query_navigation.png" />
+
+            HOV-SG extends the scope of potential navigation goals to more specific spatial concepts like regions and
+            floors compared to simple object goals. Language-guided navigation with HOV-SG involves processing complex
+            queries such as <i>find the toilet in the bathroom on floor 2</i> using a large language model (GPT-3.5). We
+            break down such lengthy instructions into three separate queries: one for the floor level, one for the room
+            level, and one for the object level. Leveraging the explicit hierarchical structure of HOV-SG, we
+            sequentially query against each hierarchy to progressively narrow down the solution space. Once a target
+            node is identified, we utilize the navigational graph mentioned above to plan a path from the starting pose
+            to the target destination, which is demonstrated in the figure above.
+
+          </div>
+          <h3 class="title is-4">3D Open-Vocabulary Semantic Segmentation on ScanNet and Replica</h3>
+          <img src="static/images/sem_seg_qual.png" />
+          <p>
+            We evaluate the open-vocabulary 3D semantic segmentation performance on the ScanNet
+            and Replica datasets. We compare our method with two competitive vision-and-language representations, namely
+            ConceptFusion and ConceptGraphs, and ablate over two CLIP backbones. In terms of mIOU and F-mIOU, HOV-SG
+            outperforms the open-vocabulary baselines by a large margin. This is primarily due to the following
+            improvements we made: First, when we merge segment features, we consider all point-wise features that each
+            segment covers and use DBSCAN to obtain the dominant feature, which increases the robustness compared to
+            taking the mean as done by ConceptGraphs. Second, when we generate the point-wise features, we use the mask
+            feature which is the weighted sum of the sub-image and its contextless counterpart, to some extent mitigate
+            the impact of salient background objects. Some qualitative results
+            are shown in the figure.
+          </p>
+          <br>
+          <h3 class="title is-4">Scene Graph Evaluation on Habitat 3D Semantics</h3>
+          <p>
+            Existing open-vocabulary evaluations usually circumvent the problem of measuring true open-vocabulary
+            semantic accuracy. This is due to arbitrary sizes of the investigated label sets, a potentially enormous
+            amount of object categories, and the ease of use of existing evaluation protocols. While human-level
+            evaluations solve this problem partly, robust replication of results remains challenging.
+
+            In this work, we propose the novel AUC<sub>k</sub><sup>top</sup> metric that quantifies the area under the
+            top-k accuracy curve between the predicted and the actual ground-truth object category. This means computing
+            the ranking of all cosine similarities between the predicted object feature and all possible category text
+            features, which are in turn encoded using a vision-language model (CLIP). Thus, the metric encodes how many
+            erroneous shots are necessary on average before the ground-truth label is predicted correctly. Based on
+            this, the metric encodes the actual open-set similarity while scaling to large, variably-sized label sets.
+            We envision a future use of this metric in various open-vocabulary tasks.
+          <div class="image-center-block">
+            <img src="static/images/auc.png" width="50%" />
+          </div>
+          </p>
+          <h3 class="title is-4">Real World Robot Experiment Setup</h3>
+          <div class="image-center-block">
+            <img src="static/images/real_world_setup.png" />
+          </div>
+          <p>
+            A major advantage of HOV-SG is that it enables robots to navigate across multiple floors to various semantic
+            concepts with hierarchical relationship constraints. To validate the system in the real world, we run a
+            Boston Dynamics Spot robot mounted with a calibrated Azure Kinect RGB-D camera and a 3D LiDAR to collect a
+            stream of RGB-D sequences inside a two-storage office building, traversing through a variety of
+            rooms with diverse semantic information as is shown in the figure. The tested trials are performed based on
+            complex hierarchical language queries that specify the floor, the room, and the object to find. All
+            hierarchical concepts relied on in these experiments are identified using our pipeline. The
+            unique difficulty in these experiments is the typical office/lab environment with many similar rooms, which
+            often produced similar room names. Having semantically varied rooms instead drastically simplifies these
+            tasks. Nonetheless, as reported in the main manuscript, we reach real-world success rates of around 55%
+            among 41 trials.
+          </p>
+
+        </div>
+      </div>
+    </div>
+
+
+
+    <!-- <section class="section" id="BibTeX">
+        <div class="container is-max-desktop content">
+          <h2 class="title">BibTeX</h2>
+          <pre><code>
+            @inproceedings{huang23avlmaps,
+              title={Audio Visual Language Maps for Robot Navigation},
+              author={Chenguang Huang and Oier Mees and Andy Zeng and Wolfram Burgard},
+              booktitle={Proceedings of the International Symposium on Experimental Robotics (ISER)},
+              year={2023},
+              address = {Chiang Mai, Thailand}
+          }</code></pre>
+        </div>
+      </section> -->
+
+
+    <section class="section">
+      <div class="container is-max-desktop">
+        <h2 class="title is-3">People</h2>
+        <div class="columns container">
+          <div class="column has-text-centered profile">
+            <a href="https://github.com/abwerby"><img src="static/images/abdelrhman.png" alt="Abdelrhman Werby" /></a>
+            <h3><a href="https://github.com/abwerby">Abdelrhman Werby</a></h3>
+          </div>
+          <div class="column has-text-centered profile">
+            <a href="http://www2.informatik.uni-freiburg.de/~huang/"><img src="static/images/huang.jpg"
+                alt="Chenguang Huang" /></a>
+            <h3><a href="http://www2.informatik.uni-freiburg.de/~huang/">Chenguang Huang</a></h3>
+          </div>
+
+          <div class="column has-text-centered profile">
+            <a href="https://rl.uni-freiburg.de/people/buechner"><img src="static/images/martin.png"
+                alt="Martin Büchner" /></a>
+            <h3><a href="https://rl.uni-freiburg.de/people/buechner">Martin Büchner</a></h3>
+          </div>
+
+          <div class="column has-text-centered profile">
+            <a href="https://rl.uni-freiburg.de/people/valada"><img src="static/images/abhinav.png"
+                alt="Abhinav Valada" /></a>
+            <h3><a href="https://rl.uni-freiburg.de/people/valada">Abhinav Valada</a></h3>
+          </div>
+
+          <div class="column has-text-centered profile">
+            <a href="https://www.utn.de/1/wolfram-burgard/"><img src="static/images/burgard.jpg"
+                alt="Wolfram Burgard" /></a>
+            <h3><a href="https://www.utn.de/1/wolfram-burgard/">Wolfram Burgard</a></h3>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <footer class="footer">
+      <div class="container">
+        <div class="content has-text-centered">
+          <a class="icon-link" href="https://arxiv.org/pdf/2210.05714.pdf">
+            <i class="fas fa-file-pdf"></i>
+          </a>
+          <a class="icon-link" href="" class="external-link" disabled>
+            <i class="fab fa-github"></i>
+          </a>
+        </div>
+        <div class="columns is-centered">
+          <div class="column is-8">
+            <div class="content">
+              <p> Website borrowed from <a href="https://github.com/nerfies/nerfies.github.io">NeRFies</a> under a <a
+                  href="https://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0
+                  International</a>
+              </p>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+</body>
+
+</html>
