@@ -289,6 +289,11 @@
           <div class="content has-text-justified has-text-centered">
             <img src="static/images/overview-icra.png" />
             <h3 class="title is-4">HOV-SG Creation</h3>
+            <div class="container columns is-centered">
+              <video autoplay muted loop playsinline width="50%">
+                <source src="static/images/twitter_hovsg.mp4" type="video/mp4">
+              </video>
+            </div>
             <p>
               The key idea of building a Hierarchical Open-Vocabulary 3D Scene Graph (HOV-SG) is to first
               segment-level open-vocabulary mapping and then construct a hierarchical scene graph in a top-down manner.
@@ -311,7 +316,8 @@
             <img src="static/images/floor_and_room_seg_compressed.png" />
             <p>
               Given the segment-level open-vocabulary map, we construct a hierarchical 3D scene graph in a top-down
-              manner. In order to separate floors, we identify peaks within a height histogram over all points contained
+              manner. In order to separate floors, we identify peaks within a height histogram over all points
+              contained
               in the point cloud. We apply adaptive thresholding and DBSCAN clustering to obtain potential floors and
               ceilings. We select the top-2 levels in each cluster. Taken pairwise, these represent individual floors
               (floor and ceiling) in the building as in the figure above. We equip each floor node with a CLIP text
@@ -319,7 +325,8 @@
               established.
             </p>
             <p>
-              Based on each obtained floor point cloud, we construct a 2D bird’s-eye-view (BEV) histogram as outlined in
+              Based on each obtained floor point cloud, we construct a 2D bird’s-eye-view (BEV) histogram as outlined
+              in
               the right part of the figure above. Next, we obtain walls and apply the Watershed algorithm to obtain a
               list of region masks. We extract the 3D points that fall into the floor’s height interval as well as the
               BEV room segment to form room point clouds that are used to associate objects to rooms later. Each room
@@ -333,9 +340,11 @@
               room segment to those rooms. The CLIP embeddings of these images are filtered by extracting k
               representative view embeddings using the k-means algorithm. During the query, we compute the cosine
               similarity between the CLIP text embeddings of a room categories list and each representative feature,
-              resulting in a similarity matrix. With the $\operatorname{argmax}$ operation, we obtain opinions from all
+              resulting in a similarity matrix. With the $\operatorname{argmax}$ operation, we obtain opinions from
+              all
               representatives, allowing retrieval of the room type voted by the majority. These K representative
-              embeddings and the room point cloud are jointly stored in the root node in the graph. An edge between the
+              embeddings and the room point cloud are jointly stored in the root node in the graph. An edge between
+              the
               floor node and each room node and its parent floor node is established. The construction and querying of
               room features are illustrated in the figure above.
             </p>
@@ -347,11 +356,14 @@
 
             HOV-SG extends the scope of potential navigation goals to more specific spatial concepts like regions and
             floors compared to simple object goals. Language-guided navigation with HOV-SG involves processing complex
-            queries such as <i>find the toilet in the bathroom on floor 2</i> using a large language model (GPT-3.5). We
-            break down such lengthy instructions into three separate queries: one for the floor level, one for the room
+            queries such as <i>find the toilet in the bathroom on floor 2</i> using a large language model (GPT-3.5).
+            We
+            break down such lengthy instructions into three separate queries: one for the floor level, one for the
+            room
             level, and one for the object level. Leveraging the explicit hierarchical structure of HOV-SG, we
             sequentially query against each hierarchy to progressively narrow down the solution space. Once a target
-            node is identified, we utilize the navigational graph mentioned above to plan a path from the starting pose
+            node is identified, we utilize the navigational graph mentioned above to plan a path from the starting
+            pose
             to the target destination, which is demonstrated in the figure above.
 
           </div>
