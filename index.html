@@ -115,11 +115,11 @@
                 </span>
                 <!-- Code Link. -->
                 <span class="link-block">
-                  <a href="https://github.com/" class="external-link button is-normal is-rounded is-dark">
+                  <a href="https://github.com/hovsg/HOV-SG" class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
                       <i class="fab fa-github"></i>
                     </span>
-                    <span>Code (Coming Soon)</span>
+                    <span>Code</span>
                   </a>
                 </span>
                 <span class="link-block">
@@ -272,16 +272,20 @@
           <h2 class="title is-3">Abstract</h2>
           <div class="content has-text-justified">
             <p>
-              Typically, robotic mapping relies on highly accurate dense representations obtained via approaches to
-              simultaneous localization and mapping. While these maps allow for point/voxel-level features, they do not
-              provide language grounding within large-scale environments due to the sheer number of points. In this
-              work, we present HOV-SG, a hierarchical open-vocabulary 3D scene graph mapping approach for robot
-              navigation. Using open-vocabulary vision foundation models, we first obtain state-of-the-art
-              open-vocabulary maps in 3D. We then perform floor as well as room segmentation and identify room names.
-              Finally, we construct a 3D scene graph hierarchy. Our approach is able to represent multi-story buildings
-              and allows robots to traverse them by providing feasible links among floors. We demonstrate long-horizon
-              robotic navigation in large-scale indoor environments from long queries using large language models based
-              on the obtained scene graph tokens and outperform previous baselines.
+              Recent open-vocabulary robot mapping methods enrich dense geometric maps with pre-trained visual-language
+              features. While these maps allow for the prediction of point-wise saliency maps when queried for a certain
+              language concept, largescale environments and abstract queries beyond the object level still pose a
+              considerable hurdle, ultimately limiting languagegrounded robotic navigation. In this work, we present
+              HOVSG, a hierarchical open-vocabulary 3D scene graph mapping approach for language-grounded indoor robot
+              navigation. Leveraging open-vocabulary vision foundation models, we first obtain state-of-the-art
+              open-vocabulary segment-level maps in 3D and subsequently construct a 3D scene graph hierarchy consisting
+              of floor, room, and object concepts, each enriched with openvocabulary features. Our approach is able to
+              represent multistory buildings and allows robotic traversal of those using a cross-floor Voronoi graph.
+              HOV-SG is evaluated on three distinct datasets and surpasses previous baselines in open-vocabulary
+              semantic accuracy on the object, room, and floor level while producing a 75% reduction in representation
+              size compared to dense open-vocabulary maps. In order to prove the efficacy and generalization
+              capabilities of HOV-SG, we showcase successful long-horizon language-conditioned robot navigation within
+              realworld multi-story environments.
             </p>
           </div>
         </div>
